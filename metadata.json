@@ -1,0 +1,8 @@
+﻿{
+  "name": "ShopHub E-Commerce",
+  "description": "An interactive, ultra-responsive silk saree e-commerce showcase featuring fluid typography and flexible grid layouts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
+

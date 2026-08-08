@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "sample-product-slug",
+    "filename": "img_1.jpg"
+  },
+  {
+    "slug": "another-product-slug",
+    "filename": "img_2.jpg"
+  }
+]
