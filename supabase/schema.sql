@@ -1,7 +1,7 @@
-﻿-- ShopHub â€” Run this in Supabase Dashboard â†’ SQL Editor
--- https://supabase.com/dashboard â†’ your project â†’ SQL Editor â†’ New query â†’ Run
+﻿-- ShopHub — Run this in Supabase Dashboard → SQL Editor
+-- https://supabase.com/dashboard → your project → SQL Editor → New query → Run
 
--- â”€â”€â”€ Profiles (extends auth.users) â”€â”€â”€
+-- --------- Profiles (extends auth.users) ---------
 create table if not exists public.profiles (
   id uuid primary key references auth.users(id) on delete cascade,
   email text,
@@ -40,7 +40,7 @@ create trigger on_auth_user_created
   after insert on auth.users
   for each row execute function public.handle_new_user();
 
--- â”€â”€â”€ Products â”€â”€â”€
+-- --------- Products ---------
 create table if not exists public.products (
   id uuid primary key default gen_random_uuid(),
   title text not null,
@@ -63,7 +63,7 @@ create table if not exists public.products (
   updated_at timestamptz default now()
 );
 
--- â”€â”€â”€ Categories â”€â”€â”€
+-- --------- Categories ---------
 create table if not exists public.categories (
   id uuid primary key default gen_random_uuid(),
   name text not null,
@@ -71,7 +71,7 @@ create table if not exists public.categories (
   sort_order int default 0
 );
 
--- â”€â”€â”€ Orders â”€â”€â”€
+-- --------- Orders ---------
 create table if not exists public.orders (
   id uuid primary key default gen_random_uuid(),
   order_number text unique not null,
@@ -97,21 +97,21 @@ create table if not exists public.orders (
   updated_at timestamptz default now()
 );
 
--- â”€â”€â”€ Newsletter â”€â”€â”€
+-- --------- Newsletter ---------
 create table if not exists public.newsletter (
   id uuid primary key default gen_random_uuid(),
   email text unique not null,
   subscribed_at timestamptz default now()
 );
 
--- â”€â”€â”€ Site settings (single JSON document) â”€â”€â”€
+-- --------- Site settings (single JSON document) ---------
 create table if not exists public.site_settings (
   id text primary key default 'site',
   data jsonb not null default '{}'::jsonb,
   updated_at timestamptz default now()
 );
 
--- â”€â”€â”€ Row Level Security â”€â”€â”€
+-- --------- Row Level Security ---------
 alter table public.profiles enable row level security;
 alter table public.products enable row level security;
 alter table public.categories enable row level security;
@@ -187,8 +187,8 @@ create policy "Settings admin write"
   on public.site_settings for all using (public.is_admin());
 
 -- Images: stored in Supabase Storage (product-images, site-assets buckets).
--- Database columns hold CDN URLs only â€” run supabase/storage.sql to create buckets.
--- Legacy base64 or external URLs can be migrated from Admin â†’ Image Storage.
+-- Database columns hold CDN URLs only — run supabase/storage.sql to create buckets.
+-- Legacy base64 or external URLs can be migrated from Admin → Image Storage.
 
 -- Make first admin manually after signup:
 -- update public.profiles set role = 'admin' where email = 'abcdef@gmail.com';
