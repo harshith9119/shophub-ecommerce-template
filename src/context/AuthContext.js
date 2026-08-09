@@ -46,6 +46,15 @@ export function AdminAuthProvider({ children }) {
 
   const login = async (email, password) => {
     setError(null);
+    
+    // Allow hardcoded demo admin credentials (abcdef@gmail.com / 12345678) as fallback
+    if (email === 'abcdef@gmail.com' && password === '12345678') {
+      setUser({ id: 'demo-admin', email });
+      setProfile({ id: 'demo-admin', email, name: 'Demo Admin', role: 'admin' });
+      setLoading(false);
+      return { success: true };
+    }
+
     // Development bypass: allow a local dev admin when NEXT_PUBLIC_DEV_ADMIN_BYPASS=true and password === 'devadmin'
     if (DEV_ADMIN_BYPASS && password === 'devadmin') {
       setUser({ id: 'dev', email });
@@ -55,7 +64,7 @@ export function AdminAuthProvider({ children }) {
     }
 
     if (!isSupabaseConfigured()) {
-      setError('Supabase is not connected. See .env.local setup steps.');
+      setError('Supabase is not configured. Use demo credentials: abcdef@gmail.com / 12345678 or configure .env.local');
       return { success: false };
     }
 

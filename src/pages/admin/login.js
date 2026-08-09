@@ -8,7 +8,7 @@ import PageHead from '../../components/PageHead';
 
 export default function AdminLogin() {
   const [email, setEmail] = useState('abcdef@gmail.com');
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('12345678');
   const [submitting, setSubmitting] = useState(false);
   const { login, error, user, loading } = useAuth();
   const router = useRouter();
