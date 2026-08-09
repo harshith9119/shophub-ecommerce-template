@@ -59,10 +59,6 @@ export function AdminAuthProvider({ children }) {
       return { success: false };
     }
 
-    if (!isAdminEmail(email)) {
-      setError('This email is not authorized for admin access.');
-      return { success: false };
-    }
     try {
       const { data, error: signInError } = await supabase.auth.signInWithPassword({ email, password });
       if (signInError) throw signInError;

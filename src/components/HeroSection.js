@@ -13,7 +13,7 @@ export default function HeroSection({ hero }) {
       <div className="absolute inset-0">
         <SiteImage
           src={hero.image}
-          alt="ShopHub â€” designer saree collection"
+          alt="ShopHub — designer saree collection"
           className="w-full h-full object-cover object-top animate-ken-burns scale-105"
           priority
           width={1280}

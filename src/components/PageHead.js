@@ -2,7 +2,7 @@
 import { optimizeImageUrl } from '../lib/optimizeImage';
 
 export default function PageHead({ title, description, preloadImage }) {
-  const fullTitle = title ? `${title} | ShopHub` : 'ShopHub â€” Exclusive Designer Sarees';
+  const fullTitle = title ? `${title} | ShopHub` : 'ShopHub — Exclusive Designer Sarees';
   const desc =
     description ||
     'Exclusive designer sarees for events, festivals & parties. Handpicked Kanjivaram, Organza, Chinon & Linen sarees with timeless elegance.';

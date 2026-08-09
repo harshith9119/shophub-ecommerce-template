@@ -46,7 +46,7 @@ export default function Home() {
 
         <HeroSection hero={hero} general={settings.general} />
 
-        {/* Limited Picks â€” editorial banner */}
+        {/* Limited Picks — editorial banner */}
         {homepage.showLimitedPicks !== false && (
         <section className="relative bg-[#050c09] text-white overflow-hidden py-16 md:py-24 border-y border-gold/15">
           <div className="absolute inset-0 bg-grain opacity-[0.12] pointer-events-none" />
@@ -64,7 +64,7 @@ export default function Home() {
 
               <div className="flex items-center justify-center gap-3 my-6">
                 <div className="h-px w-12 bg-gradient-to-r from-transparent to-gold/30"></div>
-                <span className="text-gold text-xs">âœ¦</span>
+                <span className="text-gold text-xs">◆</span>
                 <div className="h-px w-12 bg-gradient-to-l from-transparent to-gold/30"></div>
               </div>
 
@@ -93,7 +93,7 @@ export default function Home() {
                 <p className="luxury-subheading mb-4">Beyond Fashion</p>
                 <h2 className="luxury-heading mb-6">Styles That Speak Royalty</h2>
                 <p className="text-muted font-light leading-relaxed mb-8 max-w-md">
-                  Our aim: bringing you elegant, handpicked sarees with timeless charm â€” curated for the woman who chooses grace over excess.
+                  Our aim: bringing you elegant, handpicked sarees with timeless charm — curated for the woman who chooses grace over excess.
                 </p>
                 <Link href="/catalog" className="luxury-btn">
                   Find Your Style
@@ -123,7 +123,7 @@ export default function Home() {
               <FadeIn>
                 <SectionHeader
                   eyebrow="Timeless Elegance"
-                  title={homepage.bestSellersTitle?.replace(/âš¡/g, '').trim() || 'Best Selling'}
+                  title={homepage.bestSellersTitle?.replace(/★/g, '').trim() || 'Best Selling'}
                   subtitle="Handpicked masterpieces woven with tradition, adorned for your most cherished moments."
                 />
               </FadeIn>
@@ -252,7 +252,7 @@ export default function Home() {
                         <div className="w-full p-8 bg-gradient-to-t from-charcoal/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                           <p className="text-gold text-[10px] uppercase tracking-luxury mb-2">I Like This Color</p>
                           <h3 className="font-serif text-xl text-white mb-2">{p.title}</h3>
-                          <span className="text-white/70 text-sm">{formatPrice(p.salePrice)} â€” View Product â†’</span>
+                          <span className="text-white/70 text-sm">{formatPrice(p.salePrice)} — View Product â†’</span>
                         </div>
                       </div>
                     </Link>

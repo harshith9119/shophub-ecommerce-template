@@ -1,4 +1,4 @@
-﻿-- ShopHub â€” Supabase Storage setup
+﻿-- ShopHub — Supabase Storage setup
 -- Run in Supabase Dashboard â†’ SQL Editor (after schema.sql)
 
 -- â”€â”€â”€ Buckets â”€â”€â”€

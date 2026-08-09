@@ -1,4 +1,4 @@
-﻿-- ShopHub â€” Run this in Supabase Dashboard â†’ SQL Editor
+﻿-- ShopHub — Run this in Supabase Dashboard â†’ SQL Editor
 -- https://supabase.com/dashboard â†’ your project â†’ SQL Editor â†’ New query â†’ Run
 
 -- â”€â”€â”€ Profiles (extends auth.users) â”€â”€â”€
@@ -187,7 +187,7 @@ create policy "Settings admin write"
   on public.site_settings for all using (public.is_admin());
 
 -- Images: stored in Supabase Storage (product-images, site-assets buckets).
--- Database columns hold CDN URLs only â€” run supabase/storage.sql to create buckets.
+-- Database columns hold CDN URLs only — run supabase/storage.sql to create buckets.
 -- Legacy base64 or external URLs can be migrated from Admin â†’ Image Storage.
 
 -- Make first admin manually after signup:

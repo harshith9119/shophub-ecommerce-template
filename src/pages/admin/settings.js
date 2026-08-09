@@ -24,6 +24,65 @@ function StatusRow({ label, ok, detail }) {
   );
 }
 
+function AdminEmailsManager() {
+  const [list, setList] = useState([]);
+  const [email, setEmail] = useState('');
+  const [busy, setBusy] = useState(false);
+
+  const load = async () => {
+    try {
+      const res = await fetch('/api/admins');
+      const data = await res.json();
+      setList(data.admins || []);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
+    load();
+  }, []);
+
+  const changeRole = async (emailToChange, makeAdmin) => {
+    setBusy(true);
+    await fetch('/api/set-admin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email: emailToChange, makeAdmin }),
+    });
+    await load();
+    setBusy(false);
+  };
+
+  const add = () => {
+    if (email) changeRole(email, true).then(() => setEmail(''));
+  };
+
+  return (
+    <div>
+      <div className="mb-3">
+        <input className="bg-gray-800 text-white px-3 py-2 rounded w-full" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="email to grant admin" />
+        <div className="mt-2 flex gap-2">
+          <button onClick={add} className="bg-gold text-black px-3 py-1 rounded" disabled={busy}>Grant Admin</button>
+        </div>
+      </div>
+      <div>
+        <p className="text-gray-400 text-sm mb-2">Current admins:</p>
+        <ul className="space-y-1">
+          {list.map((a) => (
+            <li key={a} className="flex items-center justify-between bg-gray-800 p-2 rounded">
+              <span>{a}</span>
+              <div className="flex gap-2">
+                <button onClick={() => changeRole(a, false)} className="text-red-400" disabled={busy}>Revoke</button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
 function SettingsContent() {
   const [status, setStatus] = useState(null);
   const [loadError, setLoadError] = useState(null);
@@ -98,7 +157,7 @@ function SettingsContent() {
             </a>
           </h2>
           <ol className="text-gray-400 text-sm space-y-3 list-decimal pl-5 leading-relaxed">
-            <li>Go to <strong className="text-white">supabase.com</strong> → New project → name it <code className="text-gold">prachavi-silks</code></li>
+            <li>Go to <strong className="text-white">supabase.com</strong> → New project → name it <code className="text-gold">shophub-ecommerce</code></li>
             <li><strong className="text-white">SQL Editor</strong> → paste and run <code className="text-gold">supabase/schema.sql</code> from this project</li>
             <li><strong className="text-white">Project Settings → API</strong> → copy Project URL and anon/public key</li>
             <li>Add to <code className="text-gold">.env.local</code>:
@@ -153,9 +212,9 @@ RAZORPAY_KEY_SECRET=your_secret_key`}</pre>
         </div>
 
         <div className="admin-card">
-          <h2 className="font-bold text-lg mb-2 text-white">Admin Email</h2>
-          <p className="text-gray-400 text-sm mb-3">Only these emails can access admin panel:</p>
-          <code className="text-gold">{ADMIN_EMAILS.join(', ')}</code>
+          <h2 className="font-bold text-lg mb-2 text-white">Admin Emails</h2>
+          <p className="text-gray-400 text-sm mb-3">Manage admin users (grant or revoke admin role).</p>
+          <AdminEmailsManager />
         </div>
       </div>
     </AdminLayout>

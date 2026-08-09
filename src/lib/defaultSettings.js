@@ -2,10 +2,10 @@
   general: {
     brandName: 'ShopHub',
     tagline: 'Elegance in Every Drape',
-    shippingBanner: 'ðŸšš Standard Shipping â‚¹150 on all orders across India ðŸšš',
+    shippingBanner: 'STANDARD SHIPPING ₹150 ON ALL ORDERS ACROSS INDIA',
     shippingCharge: 150,
     whatsappNumber: '919876543210',
-    supportEmail: 'supportprachavi@gmail.com',
+    supportEmail: 'support@shophub.com',
     phone: '',
     address: 'India',
     primaryColor: '#c5a059',
@@ -16,7 +16,7 @@
   hero: {
     subtitle: 'Elegance in Every Drape',
     title: 'WEAR WHAT\nSTANDS OUT',
-    description: 'Exclusive Designer Sarees for Events, Festivals & Parties. Handpicked Styles â€¢ Limited Collection',
+    description: 'Exclusive Designer Sarees for Events, Festivals & Parties. Handpicked Styles • Limited Collection',
     image: 'https://source.unsplash.com/800x600/?fashion,clothing/s/files/1/0680/6536/1968/files/DSC2443.jpg?v=1781861351',
     buttonText: 'Explore Collection',
     buttonLink: '/catalog',
@@ -26,7 +26,7 @@
   footer: {
     description:
       'ShopHub brings together timeless elegance, carefully curated sarees, and graceful craftsmanship designed for every special occasion. We believe in quality, detail, and creating collections that make every woman feel confident and beautiful.',
-    copyright: 'Â© 2026 - ShopHub. All Rights Reserved.',
+    copyright: '© 2026 - ShopHub. All Rights Reserved.',
   },
   policies: {
     refund: {
@@ -36,17 +36,17 @@
 <h3>Eligibility</h3>
 <ul><li>Item must be unused, unworn, and in original packaging with tags attached</li><li>Custom or altered items are not eligible for return</li><li>Sale items may have different return terms</li></ul>
 <h3>Process</h3>
-<p>Contact us at supportprachavi@gmail.com with your order number and reason for return. Once approved, we will guide you through the return process. Refunds are processed within 5-7 business days after we receive the item.</p>`,
+<p>Contact us at support@shophub.com with your order number and reason for return. Once approved, we will guide you through the return process. Refunds are processed within 5-7 business days after we receive the item.</p>`,
     },
     shipping: {
       title: 'Shipping Policy',
       content: `<h2>Shipping Policy</h2>
-<p>We offer standard shipping across India at a flat rate of â‚¹150 per order.</p>
+<p>We offer standard shipping across India at a flat rate of ₹150 per order.</p>
 <h3>Delivery Timeline</h3>
 <ul><li>Orders are processed within 1-2 business days</li><li>Standard delivery: 5-7 business days across India</li><li>Remote areas may take additional 2-3 days</li></ul>
 <h3>Packaging</h3>
 <p>Every saree is carefully packed with secure packaging to ensure it reaches you in perfect condition.</p>
-<p>For shipping queries, contact supportprachavi@gmail.com</p>`,
+<p>For shipping queries, contact support@shophub.com</p>`,}
     },
     privacy: {
       title: 'Privacy Policy',
@@ -66,7 +66,7 @@
     showAbout: true,
     showNewsletter: true,
     showProductOfWeek: true,
-    bestSellersTitle: 'âš¡ BEST SELLING âš¡',
+    bestSellersTitle: '★ BEST SELLING ★',
     newArrivalsTitle: 'New Arrivals',
     newArrivalsSubtitle: 'just for you',
     lookbookTitle: 'LOOKBOOK',
@@ -83,12 +83,12 @@
       { title: 'MODERN ELEGANCE', subtitle: 'COCKTAIL SAREES', image: 'https://source.unsplash.com/800x600/?fashion,clothing/s/files/1/0680/6536/1968/files/DSC2434.jpg?v=1781861350', link: '/catalog?category=Organza' },
       { title: 'ELEVATED STYLE', subtitle: 'FIND YOUR STYLE', image: 'https://source.unsplash.com/800x600/?fashion,clothing/s/files/1/0680/6536/1968/files/DSC2446.jpg?v=1781861351', link: '/catalog' },
     ],
-    marqueeText: 'ðŸšš Standard Shipping Charges â‚¹150 on All Orders',
+    marqueeText: 'Standard Shipping Charges ₹150 on All Orders',
   },
   features: [
-    { icon: 'truck', title: 'STANDARD SHIPPING ACROSS INDIA', description: 'Standard shipping â‚¹150 on all orders across India with secure packaging and reliable shipping.' },
+    { icon: 'truck', title: 'STANDARD SHIPPING ACROSS INDIA', description: 'Standard shipping ₹150 on all orders across India with secure packaging and reliable shipping.' },
     { icon: 'shield', title: 'QUALITY ASSURED', description: 'Every saree is carefully inspected and quality checked before dispatch to ensure a premium experience.' },
-    { icon: 'headphones', title: 'CUSTOMER SUPPORT', description: 'For any assistance or order queries, feel free to reach us at supportprachavi@gmail.com' },
+    { icon: 'headphones', title: 'CUSTOMER SUPPORT', description: 'For any assistance or order queries, feel free to reach us at support@shophub.com' },
     { icon: 'credit-card', title: 'Secure payments', description: 'Shop confidently with safe and secure payment options powered by trusted payment gateways.' },
   ],
   contact: {

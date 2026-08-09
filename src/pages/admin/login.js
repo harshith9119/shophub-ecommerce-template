@@ -63,7 +63,7 @@ export default function AdminLogin() {
               </div>
               <div>
                 <label className="block text-[10px] font-sans font-semibold uppercase tracking-wide text-gold mb-2">Password</label>
-                <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} className="admin-input" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+                <input type="password" required value={password} onChange={(e) => setPassword(e.target.value)} className="admin-input" placeholder="••••••••" />
               </div>
               <button type="submit" disabled={submitting} className="admin-btn w-full uppercase tracking-wide">
                 {submitting ? 'Signing in...' : 'Sign In'}

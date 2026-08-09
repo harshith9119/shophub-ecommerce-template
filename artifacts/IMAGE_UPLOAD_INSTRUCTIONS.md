@@ -1,6 +1,6 @@
 ﻿Image bundle & upload instructions
 
-Option A â€” quick (no keys): generate a ZIP of Unsplash images locally and import manually
+Option A — quick (no keys): generate a ZIP of Unsplash images locally and import manually
 
 1. Generate a bundle of Unsplash images:
    PowerShell:
@@ -11,7 +11,7 @@ Option A â€” quick (no keys): generate a ZIP of Unsplash images locally and
    - Upload them to your Supabase storage via the Supabase console (bucket: product-images or site-assets).
    - Update products in Supabase SQL Editor with UPDATE statements setting image URLs to the uploaded public URLs.
 
-Option B â€” automated upload to Supabase (recommended if you have service role key)
+Option B — automated upload to Supabase (recommended if you have service role key)
 
 Prereqs:
 - Node 18+ installed

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext(null);
-const STORAGE_KEY = 'prachavi-theme';
+const STORAGE_KEY = 'shophub-theme';
 
 export function ThemeProvider({ children }) {
   const [theme, setThemeState] = useState('light');

@@ -48,7 +48,7 @@ export default function Navbar({ transparent = false }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <MarqueeBar text={general.shippingBanner?.replace(/ðŸšš/g, '').trim()} />
+      <MarqueeBar text={general.shippingBanner?.replace(//g, '').trim()} />
 
       <nav
         className={`transition-all duration-700 ${
@@ -56,7 +56,7 @@ export default function Navbar({ transparent = false }) {
         }`}
       >
         <div className="luxury-container flex justify-between items-center">
-          {/* Left â€” desktop links */}
+          {/* Left — desktop links */}
           <div className="hidden lg:flex items-center gap-10 flex-1">
             {links.map(({ href, label }) => (
               <Link
@@ -121,7 +121,7 @@ export default function Navbar({ transparent = false }) {
               <User className="w-[18px] h-[18px]" strokeWidth={1.5} />
             </Link>
 
-            {/* Cart â€” visible everywhere */}
+            {/* Cart — visible everywhere */}
             <Link
               href="/cart"
               className={`relative p-2.5 transition-colors duration-300 ${navDark ? 'text-charcoal dark:text-ivory/90 hover:text-gold' : 'text-white hover:text-gold-light'}`}
