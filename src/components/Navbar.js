@@ -48,7 +48,7 @@ export default function Navbar({ transparent = false }) {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <MarqueeBar text={general.shippingBanner?.replace(//g, '').trim()} />
+      <MarqueeBar text={general.shippingBanner?.replace(/★/g, '').trim()} />
 
       <nav
         className={`transition-all duration-700 ${
