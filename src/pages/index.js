@@ -252,7 +252,7 @@ export default function Home() {
                         <div className="w-full p-8 bg-gradient-to-t from-charcoal/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                           <p className="text-gold text-[10px] uppercase tracking-luxury mb-2">I Like This Color</p>
                           <h3 className="font-serif text-xl text-white mb-2">{p.title}</h3>
-                          <span className="text-white/70 text-sm">{formatPrice(p.salePrice)} — View Product â†’</span>
+                          <span className="text-white/70 text-sm">{formatPrice(p.salePrice)} — View Product →</span>
                         </div>
                       </div>
                     </Link>

@@ -4,19 +4,16 @@ const path = require('path');
 const root = path.resolve(__dirname, '..');
 const exts = ['.js', '.jsx', '.ts', '.tsx', '.md', '.sql', '.json'];
 
+// Targeted safe replacements for common mojibake sequences
 const replacements = [
   [/•/g, '•'],
-  [/\u00A0/g, ' '],
-  [/ /g, ' '],
-  [//g, ''],
-  [/–/g, '–'],
-  [/—/g, '—'],
-  [/★/g, '★'],
-  [/◆/g, '◆'],
+  [/→/g, '→'],
+  [/---+/g, '---'],
+  [/—|—/g, '—'],
   [/₹/g, '₹'],
+  [/\u00A0/g, ' '],
+  [/\u00A0/g, ' '],
   [//g, ''],
-  [//g, ''],
-  [/•/g, '•'],
 ];
 
 function walk(dir) {
@@ -55,5 +52,5 @@ for (const f of files) {
   }
 }
 console.log('Total updated files:', updated.length);
-if (updated.length === 0) process.exit(0);
 process.exit(0);
+
