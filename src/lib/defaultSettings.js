@@ -46,7 +46,7 @@
 <ul><li>Orders are processed within 1-2 business days</li><li>Standard delivery: 5-7 business days across India</li><li>Remote areas may take additional 2-3 days</li></ul>
 <h3>Packaging</h3>
 <p>Every saree is carefully packed with secure packaging to ensure it reaches you in perfect condition.</p>
-<p>For shipping queries, contact support@shophub.com</p>`,}
+<p>For shipping queries, contact support@shophub.com</p>`,
     },
     privacy: {
       title: 'Privacy Policy',
