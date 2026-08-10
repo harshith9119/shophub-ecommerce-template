@@ -131,7 +131,7 @@ export default function Login() {
                   </div>
                   <div>
                     <label className="block text-[10px] font-semibold uppercase tracking-luxury text-subtle mb-2.5">Password</label>
-                    <input type="password" required value={signInForm.password} onChange={(e) => setSignInForm({ ...signInForm, password: e.target.value })} className={inputClass} placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢" />
+                    <input type="password" required value={signInForm.password} onChange={(e) => setSignInForm({ ...signInForm, password: e.target.value })} className={inputClass} placeholder="••••••••" />
                   </div>
                   <button type="submit" disabled={loading || !isSupabaseConfigured()} className="luxury-btn w-full disabled:opacity-50 mt-2">
                     {loading ? 'Signing in...' : 'Sign In'}

@@ -51,7 +51,7 @@ export default function AdminLayout({ children, title }) {
     <div className="min-h-screen bg-gray-950 text-white flex">
       <aside className="w-64 bg-gray-900 border-r border-gray-800 hidden lg:flex flex-col fixed h-full z-40">
         <div className="p-6 border-b border-gray-800">
-          <h2 className="text-xl font-serif font-medium tracking-widest text-gold">PRACHAVI</h2>
+          <h2 className="text-xl font-serif font-medium tracking-widest text-gold">ShopHub</h2>
           <p className="text-xs text-gray-500 mt-1 truncate">{user?.email}</p>
         </div>
         <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
@@ -89,7 +89,7 @@ export default function AdminLayout({ children, title }) {
 
       <div className="flex-1 lg:ml-64">
         <header className="bg-gray-900 border-b border-gray-800 px-6 py-4 lg:hidden flex justify-between items-center sticky top-0 z-30">
-          <span className="font-bold text-orange-500">PRACHAVI ADMIN</span>
+          <span className="font-bold text-orange-500">ShopHub Admin</span>
           <select
             onChange={(e) => router.push(e.target.value)}
             value={router.pathname}
